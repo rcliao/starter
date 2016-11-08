@@ -47,4 +47,16 @@ var routes = Routes{
 		"/",
 		Index,
 	},
+	Route{
+		"Todos",
+		"GET",
+		"/api/v1/todo/list",
+		GetTodos,
+	},
+	Route{
+		"AddTestTodo",
+		"POST",
+		"/api/v1/todo",
+		AddTodo,
+	},
 }

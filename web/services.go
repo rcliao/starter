@@ -17,7 +17,7 @@ type TodoService struct {
 func (s *TodoService) List() ([]*starter.Todo, error) {
 	var result []*starter.Todo
 	c := s.client.db.session.DB("go-starter").C("todo")
-	err := c.Find(bson.M{}).All(result)
+	err := c.Find(bson.M{}).All(&result)
 	if err != nil {
 		return nil, err
 	}

@@ -5,7 +5,7 @@ type TodoID string
 
 // Todo represents a single todo item with name, description and whether its done
 type Todo struct {
-	ID          TodoID `json:"id" bson:"_id"`
+	ID          TodoID `json:"id" bson:"_id,omitempty"`
 	Name        string `json:"name" bson:"name"`
 	Description string `json:"description" bson:"description"`
 	Done        bool   `json:"done" bson:"done"`
